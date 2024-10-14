@@ -1,0 +1,54 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: limegreen;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.login-card {
+  border-radius: 1em;
+  border: 1px solid gray;
+  width: 500px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+
+.login-button{
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+
+h5 {
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+&:hover {
+   text-decoration: underline;
+ }
+}
+}

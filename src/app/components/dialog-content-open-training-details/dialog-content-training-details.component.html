@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Hi</h2>
+<div *ngFor="let trainings of trainings">
+  <mat-dialog-content [ngModel]="outPutFunction()">
+    <p>What's your favorite animal? {{trainings.date}}</p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button>modify</button>
+    <button mat-button cdkFocusInitial>delete</button>
+  </mat-dialog-actions>
+</div>
+

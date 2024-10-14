@@ -1,0 +1,56 @@
+.header-container {
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4caf50; /* Green color */
+    color: white;
+
+    .menu-icon {
+      display: none; /* Hidden by default */
+    }
+
+    .spacer {
+      flex: 1;
+    }
+
+    .custom-tab-group {
+      display: flex;
+
+      mat-tab {
+        flex: 1;
+      }
+    }
+
+    button[mat-icon-button] {
+      margin-left: 10px;
+    }
+  }
+
+  mat-sidenav-container {
+    height: 100%;
+    position: relative; /* Ensure proper stacking context */
+    z-index: 0; /* Reset stacking context for the container */
+  }
+
+  .sidenav {
+    z-index: 1000; /* Ensure the sidenav is above the main content */
+    position: fixed; /* Position the sidenav correctly */
+  }
+
+  @media (max-width: 768px) {
+    mat-toolbar {
+      .custom-tab-group {
+        display: none; /* Hide tab group on small screens */
+      }
+
+      .menu-icon {
+        display: block; /* Show menu icon on small screens */
+      }
+    }
+
+    .sidenav {
+      width: 250px;
+    }
+  }
+}

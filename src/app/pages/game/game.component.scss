@@ -1,0 +1,77 @@
+
+/* Container for the main dashboard */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f2f5;
+  flex-grow: 1;
+}
+
+/* Section containing the dashboard cards */
+.dashboard-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Individual dashboard card styling */
+.dashboard-card {
+  border-radius: 1em;
+  border: 2px solid #32cd32; /* Limegreen */
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+
+&:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+ }
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+&.clicked {
+   color: #fff; /* Yellow for clicked state */
+   background-color: #32cd32; /* Orange for clicked state */
+ }
+
+p {
+  font-size: 1em;
+  color: #333;
+}
+}
+
+.add-game {
+  background-color: #32cd32;
+  width: 100px;
+  height: 50px;
+  color: white;
+  border-color: limegreen;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .dashboard-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .dashboard-section {
+    flex-direction: column;
+    width: 90%;
+  }
+}

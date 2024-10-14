@@ -1,0 +1,64 @@
+<div class="header-container">
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav mode="over" class="sidenav">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/training" routerLinkActive="active">Training</a>
+        <a mat-list-item routerLink="/game" routerLinkActive="active">Game</a>
+        <a mat-list-item routerLink="/message" routerLinkActive="active">Message</a>
+        <a mat-list-item routerLink="/profile" routerLinkActive="active">Profile</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+      <mat-toolbar>
+        <mat-toolbar-row>
+          <button mat-icon-button class="menu-icon" (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+            <mat-icon>menu</mat-icon>
+          </button>
+          <mat-icon class="green-toolbar">sports_soccer</mat-icon>
+          <span class="spacer"></span>
+          <mat-tab-group
+            class="custom-tab-group"
+            [selectedIndex]="selectedIndex"
+            (selectedTabChange)="onTabChange($event)"
+            fxHide.lt-md>
+            <mat-tab label="Training">
+              <ng-template mat-tab-label>
+                <mat-icon>fitness_center</mat-icon>
+                Training
+              </ng-template>
+            </mat-tab>
+            <mat-tab label="Game">
+              <ng-template mat-tab-label>
+                <mat-icon>sports_soccer</mat-icon>
+                Game
+              </ng-template>
+            </mat-tab>
+            <mat-tab label="Message">
+              <ng-template mat-tab-label>
+                <mat-icon matBadge="8" matBadgePosition="before" matBadgeSize="small">message</mat-icon>
+                Message
+              </ng-template>
+            </mat-tab>
+            <mat-tab label="Profile">
+              <ng-template mat-tab-label>
+                <mat-icon>person</mat-icon>
+                Profile
+              </ng-template>
+            </mat-tab>
+          </mat-tab-group>
+          <span class="spacer"></span>
+          <button mat-icon-button>
+            <mat-icon matBadge="15" matBadgeSize="small">notifications</mat-icon>
+          </button>
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>account_circle</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Settings</button>
+            <button mat-menu-item>Logout</button>
+          </mat-menu>
+        </mat-toolbar-row>
+      </mat-toolbar>
+</div>

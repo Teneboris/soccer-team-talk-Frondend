@@ -1,0 +1,24 @@
+<app-header></app-header>
+
+<div class="dashboard-container">
+  <Button class="add-training-button" (click)="openDialog()">Add Training</Button>
+  <section class="dashboard-section">
+    <div
+      class ="dashboard-card"
+      *ngFor="let training of trainings; let i = index"
+      [ngClass]="{'clicked' : clickedCard === i}"
+      (click)="onCardClick(i); openDialogTrainingDetails()">
+      <div class="address-styling">
+        <h2>{{training.date}}</h2>
+        <h2>{{training.address}}</h2>
+        <div class="postalCode-city-styling">
+          <h2>{{training.postalCode}}</h2>
+          <h2 class="city-styling">{{training.city}}</h2>
+        </div>
+      </div>
+      <p class="description-styling">{{training.description}}</p>
+    </div>
+  </section>
+</div>
+
+<app-footer></app-footer>

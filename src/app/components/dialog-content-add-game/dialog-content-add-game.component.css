@@ -1,0 +1,63 @@
+.mat-dialog-title {
+  background-color: limegreen;
+  justify-content: center;
+  text-align: center;
+}
+.game-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 48%;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-field {
+  border: 1px solid #4caf50; /* Green border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 8px; /* Padding inside the input field */
+  background-color: white; /* White background for a clean look */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.custom-field:hover {
+  border-color: #388e3c; /* Darker green on hover */
+}
+
+.custom-field input,
+.custom-field textarea,
+.custom-field mat-datepicker-toggle {
+  background-color: transparent; /* Transparent background for inputs */
+  border: none; /* Remove the default input border */
+  outline: none; /* Remove outline on focus */
+  width: 100%; /* Ensure inputs take the full width of the parent */
+  padding: 8px 0; /* Add padding to the input text */
+}
+
+.mat-dialog-content {
+  padding: 16px 24px;
+}
+
+.mat-dialog-actions {
+  padding: 8px 24px;
+}
+
+@media (max-width: 768px) {
+  .half-width {
+    width: 100%; /* Stack inputs vertically on small screens */
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,40 @@
+<h2 mat-dialog-title class="mat-dialog-title">Add Game</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="game-form">
+    <mat-form-field class="full-width custom-field">
+      <mat-label>Opponent</mat-label>
+      <input matInput placeholder="Enter opponent's name">
+    </mat-form-field><br>
+
+    <mat-form-field class="full-width custom-field">
+      <mat-label>Telephone Opponent</mat-label>
+      <span matPrefix>+49 &nbsp;</span>
+      <input type="tel" matInput placeholder="Enter phone number">
+    </mat-form-field><br>
+
+    <mat-form-field class="full-width custom-field">
+      <mat-label>Address</mat-label>
+      <textarea matInput placeholder="Enter the address"></textarea>
+    </mat-form-field><br>
+
+    <div class="form-row">
+      <mat-form-field class="half-width custom-field">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="Enter city">
+      </mat-form-field>
+      <mat-form-field class="half-width custom-field">
+        <mat-label>Postal Code</mat-label>
+        <input matInput maxlength="5" placeholder="Enter postal code">
+      </mat-form-field>
+    </div><br>
+
+    <mat-form-field class="full-width custom-field">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Enter any comments"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="true">OK</button>
+</mat-dialog-actions>
