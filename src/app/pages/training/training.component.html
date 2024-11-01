@@ -7,7 +7,10 @@
       class ="dashboard-card"
       *ngFor="let training of trainings; let i = index"
       [ngClass]="{'clicked' : clickedCard === i}"
-      (click)="onCardClick(i); openDialogTrainingDetails()">
+      (click)="onCardClick(i);
+      openDialogTrainingDetails(training);
+      gotToTraining(training.id);
+      getParamsId(training.id)">
       <div class="address-styling">
         <h2>{{training.date}}</h2>
         <h2>{{training.address}}</h2>

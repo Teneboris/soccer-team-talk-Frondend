@@ -29,6 +29,11 @@ export class HeaderComponent {
     this.router.navigate([`/${tabRoutes[event.index]}`]);
   }
 
+  logout() {
+    localStorage.removeItem('authToken');
+    this.router.navigate(['/login'])
+  }
+
   private updateSelectedIndex(url: string) {
     if (url.includes('training')) {
       this.selectedIndex = 0;

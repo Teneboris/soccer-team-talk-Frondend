@@ -34,6 +34,7 @@ import {ErrorInterceptor} from "./services/interceptor/error-interceptor";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import { DialogContentTrainingDetailsComponent } from './components/dialog-content-open-training-details/dialog-content-training-details.component';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -49,29 +50,30 @@ import { DialogContentTrainingDetailsComponent } from './components/dialog-conte
     DialogContentAddGameComponent,
     DialogContentTrainingDetailsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatListModule,
-    MatBadgeModule,
-    HttpClientModule,
-    MatDialogModule,
-    MatProgressSpinnerModule,
-    FormsModule,
-    MatDatepickerModule,
-    MatNativeDateModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        ReactiveFormsModule,
+        MatInputModule,
+        MatButtonModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatMenuModule,
+        MatSidenavModule,
+        MatListModule,
+        MatBadgeModule,
+        HttpClientModule,
+        MatDialogModule,
+        MatProgressSpinnerModule,
+        FormsModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatSelectModule
+    ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptor, multi: true },

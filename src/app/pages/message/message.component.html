@@ -1,7 +1,29 @@
 <app-header></app-header>
 
-<div>
-  Messages work!
+<div class="fancy-message-container">
+  <div class="message-header">
+    <i class="icon fas fa-comment-dots"></i>
+    <mat-form-field class="custom-form-field">
+      <mat-label>Select Contact</mat-label>
+      <mat-select name="contact" placeholder="Choose a contact">
+        <mat-option >
+
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="messages-container">
+    <div class="messages-sender">There are a number of features that can be used with both and.</div>
+    <div class="messages-recipient">this is a received message There are a number of features that can be used with both and.</div>
+  </div>
+  <div class="message-body">
+    <textarea class="custom-textarea" placeholder="Type your message here..."></textarea>
+  </div>
+  <div class="message-footer">
+    <button class="send-button">
+      <mat-icon aria-hidden="false" aria-label="Send icon">send</mat-icon>
+    </button>
+  </div>
 </div>
 
 <app-footer></app-footer>

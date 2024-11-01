@@ -1,11 +1,17 @@
-<h2 mat-dialog-title>Hi</h2>
-<div *ngFor="let trainings of trainings">
-  <mat-dialog-content [ngModel]="outPutFunction()">
-    <p>What's your favorite animal? {{trainings.date}}</p>
-  </mat-dialog-content>
-  <mat-dialog-actions>
-    <button mat-button>modify</button>
-    <button mat-button cdkFocusInitial>delete</button>
+<h2 mat-dialog-title class="mat-dialog-title">Training Details</h2>
+
+<div class="training-details-container">
+  <div *ngIf="data" class="training-content">
+    <mat-dialog-content>
+      <p class="training-date">{{ data.date}}</p>
+      <p class="training-address">{{ data.address }}, {{ data.city }} - {{ data.postalCode }}</p>
+      <p class="training-description">{{ data.description }}</p>
+    </mat-dialog-content>
+  </div>
+
+  <mat-dialog-actions class="details-buttons" align="end">
+<!--    <button mat-flat-button color="primary">Modify</button>-->
+    <button mat-flat-button color="accent" (click)="startConversation()">Start Chat</button>
+    <button mat-flat-button color="warn" class="danger">Delete</button>
   </mat-dialog-actions>
 </div>
-
