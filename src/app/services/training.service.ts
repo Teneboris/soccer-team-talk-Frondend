@@ -19,8 +19,8 @@ export class TrainingService{
     return this.http.post<TrainingModel>(`${this.apiUrl}/createTraining`, training)
   }
 
-  deleteTraining(trainingId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${trainingId}`);
+  deleteTraining(trainingId: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/deleteTraining/${trainingId}`);
   }
 
   updateTraining(training: TrainingModel): Observable<TrainingModel> {

@@ -4,7 +4,7 @@
   <div *ngIf="data" class="training-content">
     <mat-dialog-content>
       <p class="training-date">{{ data.date}}</p>
-      <p class="training-address">{{ data.address }}, {{ data.city }} - {{ data.postalCode }}</p>
+      <p class="training-address">{{ data.address }}, {{ data.postalCode }} - {{ data.city }}</p>
       <p class="training-description">{{ data.description }}</p>
     </mat-dialog-content>
   </div>
@@ -12,6 +12,6 @@
   <mat-dialog-actions class="details-buttons" align="end">
 <!--    <button mat-flat-button color="primary">Modify</button>-->
     <button mat-flat-button color="accent" (click)="startConversation()">Start Chat</button>
-    <button mat-flat-button color="warn" class="danger">Delete</button>
+    <button mat-flat-button color="warn" class="danger" (click)="deleteTraining(data.id)">Delete</button>
   </mat-dialog-actions>
 </div>

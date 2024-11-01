@@ -20,7 +20,6 @@ export class DialogContentTrainingDetailsComponent {
 
   ngOnInit(): void {
 
-
   }
 
 /*  getTrainingById(trainingId: string | undefined) {
@@ -40,16 +39,17 @@ export class DialogContentTrainingDetailsComponent {
     this.router.navigate([`/message`]);
   }
 
-  deleteTraining(trainingId: number): void {
-    this.trainingService.deleteTraining(trainingId).subscribe(
-      response => {
-        console.log('Training deleted:', response);
-        this.trainingService.getTrainings();
-      },
-      error => {
-        console.error('Error deleting training:', error);
-      }
-    );
+  deleteTraining(trainingId: string): void {
+    if(trainingId === this.data.id) {
+      this.trainingService.deleteTraining(trainingId).subscribe(
+        response => {
+          this.trainingService.getTrainings();
+        },
+        error => {
+          console.error('Error deleting training:', error);
+        }
+      );
+    }
   }
 
   updateTraining(updatedTraining: TrainingModel): void {
