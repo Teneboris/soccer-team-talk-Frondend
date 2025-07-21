@@ -6,12 +6,27 @@ phases:
       nodejs: 18
     commands:
       - echo Installing dependencies...
+      - npm install -g @angular/cli
       - npm ci --legacy-peer-deps
+
+  pre_build:
+    commands:
+      - echo Running tests...
+      - ng test --watch=false --browsers=ChromeHeadless
 
   build:
     commands:
-      - echo Building the Typescript app...
-      - ng build
+      - echo Building the Angular app...
+      - ng build --configuration=production
+
+  post_build:
+    commands:
+      - echo Build completed!
+
+cache:
+  paths:
+    - '/root/.npm/**/*'
+    - 'node_modules/**/*'
 
 artifacts:
   files:
