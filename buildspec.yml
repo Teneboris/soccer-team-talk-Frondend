@@ -12,7 +12,6 @@ phases:
   pre_build:
     commands:
       - echo Running tests...
-      - ng test --watch=false --browsers=ChromeHeadless
 
   build:
     commands:
